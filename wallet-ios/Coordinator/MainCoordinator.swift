@@ -8,13 +8,6 @@
 import Foundation
 import UIKit
 
-protocol Coordinator {
-    var navigationController: UINavigationController?  { get set }
-
-    func start()
-}
-
-
 class MainCoordinator: Coordinator {
 
     var navigationController: UINavigationController?
@@ -27,7 +20,7 @@ class MainCoordinator: Coordinator {
 
 }
 
-extension MainCoordinator {
+extension MainCoordinator: Coordinating {
 
     func openSecondController() {
         let vc = secondController()
@@ -36,9 +29,7 @@ extension MainCoordinator {
     }
 
     func openMainController() {
-        let vc = MainViewController()
-        vc.coordinator = self
-        navigationController?.pushViewController(vc, animated: true)
+        self.start()
     }
 
 }

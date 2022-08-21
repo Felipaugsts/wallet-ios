@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var coordinator: MainCoordinator?
+    var coordinator: Coordinating?
 
     let button: UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
 
 class secondController: UIViewController {
 
-    weak var coordinator: MainCoordinator?
+    var coordinator: Coordinating?
 
     let button: UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 50))

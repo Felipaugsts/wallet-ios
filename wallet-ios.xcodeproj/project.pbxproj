@@ -17,6 +17,7 @@
 		C53B522028B2AA85004777C5 /* wallet_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B521F28B2AA85004777C5 /* wallet_iosUITests.swift */; };
 		C53B522228B2AA85004777C5 /* wallet_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B522128B2AA85004777C5 /* wallet_iosUITestsLaunchTests.swift */; };
 		C53B523028B2AD2D004777C5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B522F28B2AD2D004777C5 /* MainCoordinator.swift */; };
+		C53B523528B2C6EC004777C5 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B523428B2C6EC004777C5 /* CoordinatorProtocol.swift */; };
 		CBED9615289C8A1C66D9B29C /* Pods_wallet_ios_wallet_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477C3297D4D879232B33CF11 /* Pods_wallet_ios_wallet_iosUITests.framework */; };
 		E238B5CF9A23D84900CC5F5C /* Pods_wallet_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC992B16A7170D179A14D70 /* Pods_wallet_ios.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		C53B521F28B2AA85004777C5 /* wallet_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallet_iosUITests.swift; sourceTree = "<group>"; };
 		C53B522128B2AA85004777C5 /* wallet_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wallet_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C53B522F28B2AD2D004777C5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C53B523428B2C6EC004777C5 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D26EC9E577A28AD2A8CA9AFD /* Pods-wallet-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wallet-ios.debug.xcconfig"; path = "Target Support Files/Pods-wallet-ios/Pods-wallet-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		EC136F428BCE4376660C2CEC /* Pods_wallet_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallet_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC992B16A7170D179A14D70 /* Pods_wallet_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wallet_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,11 +141,12 @@
 		C53B51FD28B2AA83004777C5 /* wallet-ios */ = {
 			isa = PBXGroup;
 			children = (
+				C53B523328B2C6DD004777C5 /* Protocols */,
 				C53B522E28B2AD12004777C5 /* Coordinator */,
+				C53B523628B2C723004777C5 /* Controllers */,
+				C53B520728B2AA84004777C5 /* Assets.xcassets */,
 				C53B51FE28B2AA83004777C5 /* AppDelegate.swift */,
 				C53B520028B2AA83004777C5 /* SceneDelegate.swift */,
-				C53B520228B2AA83004777C5 /* MainViewController.swift */,
-				C53B520728B2AA84004777C5 /* Assets.xcassets */,
 				C53B520928B2AA84004777C5 /* LaunchScreen.storyboard */,
 				C53B520C28B2AA84004777C5 /* Info.plist */,
 			);
@@ -173,6 +176,22 @@
 				C53B522F28B2AD2D004777C5 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C53B523328B2C6DD004777C5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C53B523428B2C6EC004777C5 /* CoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C53B523628B2C723004777C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C53B520228B2AA83004777C5 /* MainViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +398,7 @@
 			files = (
 				C53B520328B2AA83004777C5 /* MainViewController.swift in Sources */,
 				C53B523028B2AD2D004777C5 /* MainCoordinator.swift in Sources */,
+				C53B523528B2C6EC004777C5 /* CoordinatorProtocol.swift in Sources */,
 				C53B51FF28B2AA83004777C5 /* AppDelegate.swift in Sources */,
 				C53B520128B2AA83004777C5 /* SceneDelegate.swift in Sources */,
 			);
